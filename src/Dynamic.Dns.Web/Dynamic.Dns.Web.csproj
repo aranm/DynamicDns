@@ -180,6 +180,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Infrastructure\HttpRequestMessageExtensions.cs" />
     <Compile Include="Infrastructure\Windsor\Installers\ServicesInstaller.cs" />
     <Compile Include="Infrastructure\Windsor\WindsorControllerFactory.cs" />
     <Compile Include="Infrastructure\Windsor\Installers\WindsorControllersInstaller.cs" />

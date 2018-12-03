@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using Dynamic.Dns.Web.Infrastructure;
 
 namespace Dynamic.Dns.Web.Controllers
 {
@@ -7,7 +8,7 @@ namespace Dynamic.Dns.Web.Controllers
         [Route("api/v1/address")]
         public string Get()
         {
-            var ipAddress = "127.0.0.1";
+            var ipAddress = this.Request.GetClientIpAddress();
             return ipAddress;
         }
     }
