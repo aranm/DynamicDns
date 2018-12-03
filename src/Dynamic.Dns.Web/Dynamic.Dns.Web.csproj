@@ -206,7 +206,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Dynamic.Dns.Contracts\Dynamic.Dns.Contracts.csproj">
+      <Project>{25A3A12F-C821-4177-A5C1-CE0CF48E7969}</Project>
+      <Name>Dynamic.Dns.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
