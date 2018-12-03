@@ -71,6 +71,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Infrastructure\Windsor\Attributes\InjectAttribute.cs" />
+    <Compile Include="Infrastructure\Windsor\Injection\InjectionPropertyComponentModelHelper.cs" />
+    <Compile Include="Infrastructure\Windsor\Installers\ServicesInstaller.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -102,6 +105,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dynamic.Dns.Contracts\Dynamic.Dns.Contracts.csproj">
+      <Project>{25A3A12F-C821-4177-A5C1-CE0CF48E7969}</Project>
+      <Name>Dynamic.Dns.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dynamic.Dns.Service\Dynamic.Dns.Service.csproj">
+      <Project>{77CFA0E0-A914-4BEE-ABBA-B89568FBCFA6}</Project>
+      <Name>Dynamic.Dns.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
