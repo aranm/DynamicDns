@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Configuration;
 using System.Threading.Tasks;
+using Dynamic.Dns.Contracts.Services;
 using Dynamic.Dns.Service.TableEntities;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 
 namespace Dynamic.Dns.Service.Services
 {
-    public class IpAddressWriter
+    public class AddressWriter : IAddressWriter
     {
         private readonly string _storageConnectionString;
 
-        public IpAddressWriter()
+        public AddressWriter()
         {
             _storageConnectionString = ConfigurationManager.AppSettings["StorageConnectionString"];
         }
