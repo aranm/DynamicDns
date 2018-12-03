@@ -180,6 +180,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Infrastructure\Windsor\Installers\ServicesInstaller.cs" />
     <Compile Include="Infrastructure\Windsor\WindsorControllerFactory.cs" />
     <Compile Include="Infrastructure\Windsor\Installers\WindsorControllersInstaller.cs" />
     <Compile Include="Infrastructure\Windsor\WindsorDependencyResolver.cs" />
@@ -210,6 +211,10 @@
     <ProjectReference Include="..\Dynamic.Dns.Contracts\Dynamic.Dns.Contracts.csproj">
       <Project>{25A3A12F-C821-4177-A5C1-CE0CF48E7969}</Project>
       <Name>Dynamic.Dns.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dynamic.Dns.Service\Dynamic.Dns.Service.csproj">
+      <Project>{77CFA0E0-A914-4BEE-ABBA-B89568FBCFA6}</Project>
+      <Name>Dynamic.Dns.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
