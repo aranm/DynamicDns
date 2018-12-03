@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System.Threading.Tasks;
+using System.Web.Mvc;
+using Dynamic.Dns.Contracts.Services;
 using Dynamic.Dns.Web.Models;
 
 namespace Dynamic.Dns.Web.Controllers
@@ -6,12 +8,21 @@ namespace Dynamic.Dns.Web.Controllers
     [RoutePrefix("")]
     public class HomeController : Controller
     {
-        [Route]
-        public ActionResult Index()
+        private readonly IAddressProvider _addressProvider;
+
+        public HomeController(IAddressProvider addressProvider)
         {
+            _addressProvider = addressProvider;
+        }
+
+        [Route]
+        public async Task<ActionResult> Index()
+        {
+            var ipAddress = await _addressProvider.GetLatestAddress();
+
             var ipAddressModel = new IpAddressModel
             {
-                IpAddress = "127.0.0.1"
+                IpAddress = ipAddress
             };
 
             return View(ipAddressModel);
