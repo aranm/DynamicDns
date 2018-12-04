@@ -29,6 +29,7 @@ namespace Dynamic.Dns.UserInterface
             _addressService.PropertyChanged += _addressService_PropertyChanged;
 
             InitializeComponent();
+            ipAddressLabel.Content = addressService.LatestIpAddress;
         }
 
         private void _addressService_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
