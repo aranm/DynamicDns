@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Dynamic.Dns.Contracts.Services
+namespace Dynamic.Dns.Contracts.Repository
 {
     public interface IAddressProvider
     {
