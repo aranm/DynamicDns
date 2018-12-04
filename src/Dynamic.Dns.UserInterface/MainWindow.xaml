@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dynamic.Dns.UserInterface"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Background="BlueViolet"
+        WindowStyle="ThreeDBorderWindow"
+        Title="DNS Information" Height="150.953" Width="435.238">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Foreground="DarkOrange" FontSize="24" Content="Your DNS Address Is:" Padding="10"/>
+            <Label x:Name="ipAddressLabel" Foreground="DarkOrange" FontSize="24" Content="255.255.255.255" Padding="10,10"/>
+        </StackPanel>
+        <StackPanel>
+            <Button Click="ButtonRefreshIpAddress" Foreground="DarkOrange" Background="CornflowerBlue" FontSize="24" Width="200" Margin="10">Refresh</Button>
+        </StackPanel>
+    </StackPanel>
 </Window>

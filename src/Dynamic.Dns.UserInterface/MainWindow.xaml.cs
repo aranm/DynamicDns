@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Dynamic.Dns.Contracts.Services;
 
 namespace Dynamic.Dns.UserInterface
 {
@@ -20,9 +21,31 @@ namespace Dynamic.Dns.UserInterface
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly IAddressService _addressService;
+
+        public MainWindow(IAddressService addressService)
         {
+            _addressService = addressService;
+            _addressService.PropertyChanged += _addressService_PropertyChanged;
+
             InitializeComponent();
+        }
+
+        private void _addressService_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            Dispatcher.Invoke(() =>
+            {
+                // Set property or change UI compomponents.     
+                ipAddressLabel.Content = _addressService.LatestIpAddress;
+            });
+        }
+
+        private async void ButtonRefreshIpAddress(object sender, RoutedEventArgs e)
+        {
+            await _addressService.RefreshIpAddress();
+            var ipAddress = await _addressService.GetLatestIpAddress();
+            this.ipAddressLabel.Content = ipAddress;
+            await _addressService.UpdateIpAddress();
         }
     }
 }
