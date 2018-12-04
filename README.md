@@ -1,6 +1,6 @@
 # Free Dynamic DNS Service
 
-If you don't have a pay for a fixed IP Address and want to know your IP address so you can connect to your home computer there are a few services that you can pay for that run in the background. These run on your home PC and periodically check your IP address and update a domain name registry so that even though your IP address changes the domain name changes the IP address it is pointing to. Domain names have a TTL (Time to Live) value, so the services set this value to its minimum value and every time your home IP address changes they update the domain name to point to the new IP address.
+If you don't pay for a fixed IP Address and want to know your IP address so you can connect to your home computer there are a few services that you can pay to work around this. These run on your home PC and periodically check your IP address and update a domain name registry so that even though your IP address changes the domain name changes the IP address it is pointing to. Domain names have a TTL (Time to Live) value, so the services set this value to its minimum value and every time your home IP address changes they update the domain name to point to the new IP address.
 
 I was paying for a service like this so I could connect to my home computer via remote desktop as the service was cheaper than getting a fixed IP address from my ISP. Lately the service expired and instead of paying the renewal fee I wrote this little bit of software so that I could avoid the fees.
 
@@ -34,7 +34,7 @@ The system must be installed in the following manner:
 
 ### Usage
 
-The system checks for a change in IP address every 15 minutes, or you can open the application by double clicking on the icon in the system tray and cliking "Refresh". It also shows you the current IP address of your computer as well. the main page of the web site shows you the current IP address and has a Remote Desktop file available to download so you can go to the wen site, download the RDP file and connect directly to your home PC. Or you can use the IP address to connect to your home web server or whatever else you need your IP address for.
+The system checks for a change in IP address every 15 minutes, or you can open the application by double clicking on the icon in the system tray and cliking "Refresh". It also shows you the current IP address of your computer as well. The main page of the web site shows you the current IP address and has a Remote Desktop file available to download so you can go to the wen site, download the RDP file and connect directly to your home PC. Or you can use the IP address to connect to your home web server or whatever else you need your IP address for.
 
 ### TODO
 
