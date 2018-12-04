@@ -50,9 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AddressProvider.cs" />
-    <Compile Include="Services\AddressWriter.cs" />
+    <Compile Include="Repository\AddressProvider.cs" />
+    <Compile Include="Repository\AddressWriter.cs" />
+    <Compile Include="Services\AddressService.cs" />
     <Compile Include="TableEntities\IpAddressTable.cs" />
   </ItemGroup>
   <ItemGroup>
