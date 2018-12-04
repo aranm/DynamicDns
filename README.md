@@ -19,7 +19,8 @@ The system must be installed in the following manner:
 2. Create an Azure Web Site to host **Dynamic.Dns.Web**
 3. Update the application key *StorageConnectionString* in the web.config of **Dynamic.Dns.Web**
 4. Install the **Dynamic.Dns.Web** project on the Azure Web Site, you can use Web Publish directly from Visual Studio
-5. Install the project **Dynamic.Dns.UserInterface** and make it run when Windows starts. [Have a look here](https://support.microsoft.com/en-au/help/4026268/windows-10-change-startup-apps) for information about how to run an application automatically. You will also have to set the following application keys in the [App.config file](https://github.com/aranm/DynamicDns/blob/master/src/Dynamic.Dns.UserInterface/App.config):
+5. Use the Publish command in Visual studio to publish an installer for the project **Dynamic.Dns.UserInterface**
+6. Install the published application created from the project **Dynamic.Dns.UserInterface** and make it run when Windows starts. [Have a look here](https://support.microsoft.com/en-au/help/4026268/windows-10-change-startup-apps) for information about how to run an application automatically. You will also have to set the following application keys in the [App.config file](https://github.com/aranm/DynamicDns/blob/master/src/Dynamic.Dns.UserInterface/App.config):
 
 ```xml
   <appSettings>
