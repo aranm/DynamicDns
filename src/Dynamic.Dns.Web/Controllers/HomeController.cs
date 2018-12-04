@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Mvc;
-using Dynamic.Dns.Contracts.Services;
+using Dynamic.Dns.Contracts.Repository;
 using Dynamic.Dns.Web.Models;
 
 namespace Dynamic.Dns.Web.Controllers
