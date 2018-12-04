@@ -35,7 +35,7 @@ The system must be installed in the following manner:
 
 ### Usage
 
-The system checks for a change in IP address every 15 minutes, or you can open the application by double clicking on the icon in the system tray and cliking "Refresh". It also shows you the current IP address of your computer as well. The main page of the web site shows you the current IP address and has a Remote Desktop file available to download so you can go to the wen site, download the RDP file and connect directly to your home PC. Or you can use the IP address to connect to your home web server or whatever else you need your IP address for.
+The system checks for a change in IP address every 15 minutes, or you can open the application by double clicking on the icon in the system tray and cliking "Refresh". It also shows you the current IP address of your computer as well. The main page of the web site shows you the current IP address and has a Remote Desktop file available to download so you can go to the web site, download the RDP file and connect directly to your home PC. Or you can use the IP address to connect to your home web server or whatever else you need your IP address for.
 
 ### TODO
 
